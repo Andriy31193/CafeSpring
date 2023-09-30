@@ -23,6 +23,9 @@ public class ClientEntity {
     @Column(name = "bithdate")
     private Date birthDate;
 
+    @Column(name = "email")
+    private String email;
+
     public ClientEntity() {
     }
 }

@@ -5,6 +5,7 @@ import com.example.cafespring.Repository.OrderRepository;
 import com.example.cafespring.Service.OrderService;
 import org.springframework.stereotype.Service;
 
+import java.util.Date;
 import java.util.List;
 import java.util.Optional;
 
@@ -24,6 +25,16 @@ public class OrderServiceImpl implements OrderService {
     @Override
     public Optional<OrderEntity> findById(Long id) {
         return orderRepository.findById(id);
+    }
+
+    @Override
+    public List<OrderEntity> findOrdersByDate(Date date) {
+        return orderRepository.findOrdersByDate(date);
+    }
+
+    @Override
+    public List<OrderEntity> findOrdersInDateRange(Date startDate, Date endDate) {
+        return orderRepository.findOrdersInDateRange(startDate, endDate);
     }
 
     @Override

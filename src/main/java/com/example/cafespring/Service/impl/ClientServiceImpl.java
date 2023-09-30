@@ -5,6 +5,7 @@ import com.example.cafespring.Repository.ClientRepository;
 import com.example.cafespring.Service.ClientService;
 import org.springframework.stereotype.Service;
 
+import java.util.Date;
 import java.util.List;
 import java.util.Optional;
 
@@ -58,7 +59,17 @@ public class ClientServiceImpl implements ClientService {
     }
 
     @Override
-    public double getAverageDiscount() {
+    public List<ClientEntity> findClientsWithNullEmail() {
+        return clientRepository.findClientsWithNullEmail();
+    }
+
+    @Override
+    public List<ClientEntity> findClientsByTodayDate() {
+        return clientRepository.findOrdersByTodayDate();
+    }
+
+    @Override
+    public double findAverageDiscount() {
         return clientRepository.findAverageDiscount();
     }
 

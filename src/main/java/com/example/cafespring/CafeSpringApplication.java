@@ -23,7 +23,10 @@ public class CafeSpringApplication {
 	public static void main(String[] args) {
 		ApplicationContext context =  SpringApplication.run(CafeSpringApplication.class, args);
 
-		ClientServiceImpl clientService = context.getBean(ClientServiceImpl.class);
+		OrderServiceImpl orderService = context.getBean(OrderServiceImpl.class);
+
+
+
 
 
 
