@@ -1,9 +1,9 @@
 package com.example.cafespring.Repository;
 
-import com.example.cafespring.Entity.ClientEntity;
+import com.example.cafespring.Entity.DishEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface ClientRepository extends JpaRepository<ClientEntity, Long> {
+public interface DishRepository extends JpaRepository<DishEntity, Long> {
 }

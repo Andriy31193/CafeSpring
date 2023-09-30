@@ -43,7 +43,7 @@ public class PositionServiceImpl implements PositionService {
     }
 
     @Override
-    public void deleteStaff(Long id) {
+    public void deletePosition(Long id) {
         positionRepository.deleteById(id);
     }
 }

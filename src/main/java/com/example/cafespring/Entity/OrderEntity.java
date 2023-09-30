@@ -10,18 +10,14 @@ import java.util.List;
 @Data
 @AllArgsConstructor
 @Entity
+@Table(name = "orders")
 public class OrderEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
     private Long id;
 
-    @ManyToMany
-    @JoinTable(
-            name = "order_dish", // Название таблицы-связи
-            joinColumns = @JoinColumn(name = "order_id"), // Столбец, связывающий сущность OrderEntity
-            inverseJoinColumns = @JoinColumn(name = "dish_id") // Столбец, связывающий сущность DishEntity
-    )
+    @OneToMany
     private List<DishEntity>  dishes;
 
     @ManyToOne

@@ -12,5 +12,5 @@ public interface PositionService {
     Optional<PositionEntity> findById(Long id);
     PositionEntity savePosition(PositionEntity positionEntity);
     PositionEntity updatePosition(PositionEntity positionEntity);
-    void deleteStaff(Long id);
+    void deletePosition(Long id);
 }
