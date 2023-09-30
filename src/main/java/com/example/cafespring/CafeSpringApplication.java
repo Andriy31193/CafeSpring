@@ -1,9 +1,12 @@
 package com.example.cafespring;
 
-import com.example.cafespring.Entity.ClientEntity;
+import ch.qos.logback.core.pattern.Converter;
+import com.example.cafespring.Entity.*;
 import com.example.cafespring.Repository.ClientRepository;
 import com.example.cafespring.Service.ClientService;
-import com.example.cafespring.Service.impl.ClientServiceImpl;
+import com.example.cafespring.Service.DishService;
+import com.example.cafespring.Service.impl.*;
+import org.hibernate.query.sqm.tree.expression.Conversion;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
@@ -12,6 +15,7 @@ import java.text.SimpleDateFormat;
 import java.time.LocalDate;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.Optional;
 
 @SpringBootApplication
 public class CafeSpringApplication {
@@ -21,17 +25,8 @@ public class CafeSpringApplication {
 
 		ClientServiceImpl clientService = context.getBean(ClientServiceImpl.class);
 
-		ClientEntity clientEntity = new ClientEntity();
-		clientEntity.setName("Володя");
-		clientEntity.setDiscount(50.0);
-		Calendar calendar = Calendar.getInstance();
-		calendar.set(2005, Calendar.DECEMBER, 16, 0, 0, 0); // Устанавливаем секунды, минуты и часы в ноль
-		calendar.set(Calendar.MILLISECOND, 0); // Устанавливаем миллисекунды в ноль
-		Date date = calendar.getTime();
 
-		clientEntity.setBirthDate(date);
 
-		clientService.saveClient(clientEntity);
 
 	}
 

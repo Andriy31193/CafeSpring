@@ -27,6 +27,41 @@ public class ClientServiceImpl implements ClientService {
         return clientRepository.findById(id);
     }
 
+    @Override
+    public ClientEntity findClientWithMinDiscount() {
+        return clientRepository.findClientWithMinDiscount();
+    }
+
+    @Override
+    public ClientEntity findClientWithMaxDiscount() {
+        return clientRepository.findClientWithMaxDiscount();
+    }
+
+    @Override
+    public List<ClientEntity> findClientsWithMinDiscount() {
+        return clientRepository.findClientsWithMinDiscount();
+    }
+
+    @Override
+    public List<ClientEntity> findClientsWithMaxDiscount() {
+        return clientRepository.findClientsWithMaxDiscount();
+    }
+
+    @Override
+    public ClientEntity findMinAgeClient() {
+        return clientRepository.findMinAgeClient();
+    }
+
+    @Override
+    public ClientEntity findMaxAgeClient() {
+        return clientRepository.findMaxAgeClient();
+    }
+
+    @Override
+    public double getAverageDiscount() {
+        return clientRepository.findAverageDiscount();
+    }
+
 
     @Override
     public ClientEntity saveClient(ClientEntity clientEntity) {

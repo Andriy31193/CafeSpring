@@ -3,10 +3,12 @@ package com.example.cafespring.Service.impl;
 import com.example.cafespring.Entity.DishEntity;
 import com.example.cafespring.Repository.DishRepository;
 import com.example.cafespring.Service.DishService;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
 
+@Service
 public class DishServiceImpl implements DishService {
     private final DishRepository dishRepository;
 

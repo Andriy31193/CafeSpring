@@ -24,10 +24,15 @@ public class OrderEntity {
     @JoinColumn(name = "client_id")
     private ClientEntity client;
 
+    @ManyToOne
+    @JoinColumn(name = "staff_id")
+    private StaffEntity staff;
+
     private Date date;
 
     public OrderEntity() {
 
+        this.date = new Date();
     }
 
 
