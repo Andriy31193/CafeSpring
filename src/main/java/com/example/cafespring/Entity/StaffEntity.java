@@ -24,6 +24,10 @@ public class StaffEntity {
     @JoinColumn(name = "position_id")
     private PositionEntity position;
 
+    @ManyToOne
+    @JoinColumn(name = "workschedule_id")
+    private WorkScheduleEntity workSchedule;
+
     public StaffEntity() {
     }
 }

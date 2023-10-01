@@ -1,7 +1,6 @@
 package com.example.cafespring.Service;
 
 import com.example.cafespring.Entity.OrderEntity;
-import org.springframework.data.repository.query.Param;
 
 import java.util.Date;
 import java.util.List;
@@ -13,6 +12,7 @@ public interface OrderService {
     Optional<OrderEntity> findById(Long id);
     List<OrderEntity> findOrdersByDate(Date date);
     List<OrderEntity> findOrdersInDateRange(Date startDate, Date endDate);
+    List<?> findClientsAndBaristaTodayOrder();
     OrderEntity saveOrder(OrderEntity orderEntity);
     OrderEntity updateOrder(OrderEntity orderEntity);
     void deleteOrder(Long id);
