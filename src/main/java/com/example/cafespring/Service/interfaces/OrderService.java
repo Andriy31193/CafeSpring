@@ -1,19 +1,19 @@
-package com.example.cafespring.Service.impl;
+package com.example.cafespring.Service.interfaces;
 
 import com.example.cafespring.Entity.ClientEntity;
 import com.example.cafespring.Entity.OrderEntity;
 import com.example.cafespring.Entity.StaffEntity;
 import com.example.cafespring.Repository.OrderRepository;
-import com.example.cafespring.Service.OrderService;
+import com.example.cafespring.Service.IOrderService;
 import org.springframework.stereotype.Service;
 
 import java.util.*;
 
 @Service
-public class OrderServiceImpl implements OrderService {
+public class OrderService implements IOrderService {
     private final OrderRepository orderRepository;
 
-    public OrderServiceImpl(OrderRepository orderRepository) {
+    public OrderService(OrderRepository orderRepository) {
         this.orderRepository = orderRepository;
     }
 

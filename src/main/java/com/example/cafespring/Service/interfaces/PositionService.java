@@ -1,22 +1,18 @@
-package com.example.cafespring.Service.impl;
+package com.example.cafespring.Service.interfaces;
 
-import com.example.cafespring.Entity.ClientEntity;
 import com.example.cafespring.Entity.PositionEntity;
-import com.example.cafespring.Entity.StaffEntity;
 import com.example.cafespring.Repository.PositionRepository;
-import com.example.cafespring.Repository.StaffRepository;
-import com.example.cafespring.Service.PositionService;
-import com.example.cafespring.Service.StaffService;
+import com.example.cafespring.Service.IPositionService;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
 
 @Service
-public class PositionServiceImpl implements PositionService {
+public class PositionService implements IPositionService {
     private final PositionRepository positionRepository;
 
-    public PositionServiceImpl(PositionRepository positionRepository) {
+    public PositionService(PositionRepository positionRepository) {
         this.positionRepository = positionRepository;
     }
 

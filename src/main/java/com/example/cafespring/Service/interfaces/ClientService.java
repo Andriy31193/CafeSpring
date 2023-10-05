@@ -1,19 +1,18 @@
-package com.example.cafespring.Service.impl;
+package com.example.cafespring.Service.interfaces;
 
 import com.example.cafespring.Entity.ClientEntity;
 import com.example.cafespring.Repository.ClientRepository;
-import com.example.cafespring.Service.ClientService;
+import com.example.cafespring.Service.IClientService;
 import org.springframework.stereotype.Service;
 
-import java.util.Date;
 import java.util.List;
 import java.util.Optional;
 
 @Service
-public class ClientServiceImpl implements ClientService {
+public class ClientService implements IClientService {
     private final ClientRepository clientRepository;
 
-    public ClientServiceImpl(ClientRepository clientRepository) {
+    public ClientService(ClientRepository clientRepository) {
         this.clientRepository = clientRepository;
     }
 

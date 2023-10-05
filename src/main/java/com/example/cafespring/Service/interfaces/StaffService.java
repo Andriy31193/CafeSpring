@@ -1,19 +1,18 @@
-package com.example.cafespring.Service.impl;
+package com.example.cafespring.Service.interfaces;
 
 import com.example.cafespring.Entity.StaffEntity;
 import com.example.cafespring.Repository.StaffRepository;
-import com.example.cafespring.Service.ClientService;
-import com.example.cafespring.Service.StaffService;
+import com.example.cafespring.Service.IStaffService;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
 
 @Service
-public class StaffServiceImpl implements StaffService {
+public class StaffService implements IStaffService {
     private final StaffRepository staffRepository;
 
-    public StaffServiceImpl(StaffRepository staffRepository) {
+    public StaffService(StaffRepository staffRepository) {
         this.staffRepository = staffRepository;
     }
 

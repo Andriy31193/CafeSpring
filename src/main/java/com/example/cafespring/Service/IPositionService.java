@@ -6,7 +6,7 @@ import com.example.cafespring.Entity.StaffEntity;
 import java.util.List;
 import java.util.Optional;
 
-public interface PositionService {
+public interface IPositionService {
 
     List<PositionEntity> findAll();
     Optional<PositionEntity> findById(Long id);

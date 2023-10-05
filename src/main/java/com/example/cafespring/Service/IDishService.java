@@ -9,7 +9,7 @@ import java.util.List;
 import java.util.Optional;
 
 @Service
-public interface DishService {
+public interface IDishService {
 
     List<DishEntity> findAll();
 

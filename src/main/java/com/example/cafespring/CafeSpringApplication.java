@@ -1,30 +1,20 @@
 package com.example.cafespring;
 
-import ch.qos.logback.core.pattern.Converter;
-import com.example.cafespring.Entity.*;
-import com.example.cafespring.Repository.ClientRepository;
-import com.example.cafespring.Service.ClientService;
-import com.example.cafespring.Service.DishService;
-import com.example.cafespring.Service.impl.*;
-import org.hibernate.query.sqm.tree.expression.Conversion;
+import com.example.cafespring.Service.interfaces.*;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
-
-import java.text.SimpleDateFormat;
-import java.time.LocalDate;
-import java.util.*;
 
 @SpringBootApplication
 public class CafeSpringApplication {
 
 	public static void main(String[] args) {
 		ApplicationContext context =  SpringApplication.run(CafeSpringApplication.class, args);
-		ClientServiceImpl clientService = context.getBean(ClientServiceImpl.class);
-		OrderServiceImpl orderService = context.getBean(OrderServiceImpl.class);
-		StaffServiceImpl staffService = context.getBean(StaffServiceImpl.class);
-		DishServiceImpl dishService = context.getBean(DishServiceImpl.class);
-		WorkScheduleServiceImpl workScheduleService = context.getBean(WorkScheduleServiceImpl.class);
+		ClientService clientService = context.getBean(ClientService.class);
+		OrderService orderService = context.getBean(OrderService.class);
+		StaffService staffService = context.getBean(StaffService.class);
+		DishService dishService = context.getBean(DishService.class);
+		WorkScheduleService workScheduleService = context.getBean(WorkScheduleService.class);
 
 
 		System.out.println(workScheduleService.findAllWorkSchedules());

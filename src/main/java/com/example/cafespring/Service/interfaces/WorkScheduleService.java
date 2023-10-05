@@ -1,18 +1,18 @@
-package com.example.cafespring.Service.impl;
+package com.example.cafespring.Service.interfaces;
 
 import com.example.cafespring.Entity.WorkScheduleEntity;
 import com.example.cafespring.Repository.WorkScheduleRepository;
-import com.example.cafespring.Service.WorkScheduleService;
+import com.example.cafespring.Service.IWorkScheduleService;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
 
 @Service
-public class WorkScheduleServiceImpl implements WorkScheduleService {
+public class WorkScheduleService implements IWorkScheduleService {
     private final WorkScheduleRepository workScheduleRepository;
 
-    public WorkScheduleServiceImpl(WorkScheduleRepository workScheduleRepository) {
+    public WorkScheduleService(WorkScheduleRepository workScheduleRepository) {
         this.workScheduleRepository = workScheduleRepository;
     }
 

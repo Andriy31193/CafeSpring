@@ -7,7 +7,7 @@ import java.util.Date;
 import java.util.List;
 import java.util.Optional;
 
-public interface ClientService {
+public interface IClientService {
 
     List<ClientEntity> findAll();
     Optional<ClientEntity> findById(Long id);

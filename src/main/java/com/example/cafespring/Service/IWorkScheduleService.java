@@ -9,7 +9,7 @@ import java.util.List;
 import java.util.Optional;
 
 @Service
-public interface WorkScheduleService {
+public interface IWorkScheduleService {
     List<WorkScheduleEntity> findAll();
     Optional<WorkScheduleEntity> findById(Long id);
     WorkScheduleEntity findWorkScheduleByStaffId(@Param("id")Long id);

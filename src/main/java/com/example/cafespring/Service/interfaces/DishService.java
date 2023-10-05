@@ -1,18 +1,18 @@
-package com.example.cafespring.Service.impl;
+package com.example.cafespring.Service.interfaces;
 
 import com.example.cafespring.Entity.DishEntity;
 import com.example.cafespring.Repository.DishRepository;
-import com.example.cafespring.Service.DishService;
+import com.example.cafespring.Service.IDishService;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
 
 @Service
-public class DishServiceImpl implements DishService {
+public class DishService implements IDishService {
     private final DishRepository dishRepository;
 
-    public DishServiceImpl(DishRepository dishRepository) {
+    public DishService(DishRepository dishRepository) {
         this.dishRepository = dishRepository;
     }
 

@@ -11,7 +11,7 @@ import java.util.List;
 
 @Repository
 public interface ClientRepository extends JpaRepository<ClientEntity, Long> {
-    // Метод для поиска клиента с минимальной скидкой
+
     @Query("SELECT c FROM ClientEntity c WHERE c.discount = (SELECT MIN(c2.discount) FROM ClientEntity c2)")
     ClientEntity findClientWithMinDiscount();
 
